@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    container_name: database
+    url: jdbc:postgresql://localhost:5432/saltmerch
+    name: saltmerch
+    username: jensenyh
+    password: password
+    port: 5432:5432
+
+server:
+  port: 8099
+  servlet:
+    contextPath: /api/v1
+
+
+
+
