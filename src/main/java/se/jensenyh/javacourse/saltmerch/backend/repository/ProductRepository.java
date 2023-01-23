@@ -15,6 +15,7 @@ import se.jensenyh.javacourse.saltmerch.backend.model.ColorVariant;
 import se.jensenyh.javacourse.saltmerch.backend.model.Product;
 import se.jensenyh.javacourse.saltmerch.backend.model.SizeContainer;
 
+@Repository
 public class ProductRepository
 {
     // NOTE: LEAVE THIS RECORD AS IT IS!

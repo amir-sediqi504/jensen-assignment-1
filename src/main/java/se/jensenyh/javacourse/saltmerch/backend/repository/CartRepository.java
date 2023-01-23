@@ -13,6 +13,7 @@ import java.util.Map;
 
 import se.jensenyh.javacourse.saltmerch.backend.model.CartItem;
 
+@Repository
 public class CartRepository
 {
     JdbcTemplate jdbcTemplate;
