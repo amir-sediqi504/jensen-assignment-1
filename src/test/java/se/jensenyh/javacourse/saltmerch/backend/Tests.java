@@ -1,24 +1,41 @@
 package se.jensenyh.javacourse.saltmerch.backend;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.web.bind.annotation.PathVariable;
-import se.jensenyh.javacourse.saltmerch.backend.controller.CartController;
 import se.jensenyh.javacourse.saltmerch.backend.controller.ProductController;
+import se.jensenyh.javacourse.saltmerch.backend.model.ColorVariant;
 import se.jensenyh.javacourse.saltmerch.backend.model.Product;
 import se.jensenyh.javacourse.saltmerch.backend.service.ProductService;
 
-import static org.skyscreamer.jsonassert.JSONAssert.assertEquals;
 
-@SpringBootTest
-public class Tests
-{
+class TestBag {
+    @Mock
+    private ProductService productService;
+    private ProductController controller;
+
+    @BeforeEach
+    public void setup() {
+        MockitoAnnotations.initMocks(this);
+        controller = new ProductController(productService);
+    }
+
     @Test
-void testBag(){
-        ProductService p = new ProductService();
-        ProductController pc = new ProductController(p);
-        pc.getAllBags();
-        assertEquals(200, pc.getAll);
+    public void getAllBags_callsGetAllByCategory() {
+
+        controller.getAllBags();
+
+
+        verify(productService).getAllByCategory("bags");
     }
 }
-

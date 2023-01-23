@@ -17,6 +17,7 @@ public class CartController {
     @Autowired
     CartService cartService;
 
+
     @GetMapping("/carts/{id}")
     public ResponseEntity<Object> getCartItems(@PathVariable("id") Integer id, @RequestBody CartItem item) {
         List<CartItem> items = cartService.getCartItems(item);
