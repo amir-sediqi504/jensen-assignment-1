@@ -24,4 +24,8 @@ public class ProductService
     public Product getEntireProduct(int id){
         return productRepository.getEntireProduct(id);
     }
+
+    public Object getProductByCategory(String category) {
+        return productRepository.selectAllOfCategory(category);
+    }
 }

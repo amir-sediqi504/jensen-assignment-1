@@ -18,6 +18,8 @@ import se.jensenyh.javacourse.saltmerch.backend.model.SizeContainer;
 @Repository
 public class ProductRepository
 {
+
+
     // NOTE: LEAVE THIS RECORD AS IT IS!
     private record VariantWImages(int id, String colorName, String imagesCsv) {}
 

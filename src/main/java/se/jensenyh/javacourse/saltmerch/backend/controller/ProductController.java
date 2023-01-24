@@ -37,6 +37,11 @@ public class ProductController
         return productService.getAllByCategory("bags");
     }
 
+    @GetMapping("/hats")
+    public Object getAllHats() {
+        return productService.getProductByCategory("hats");
+    }
+
     // by id:
 
    // @GetMapping("products/{}")
