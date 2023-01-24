@@ -38,8 +38,7 @@ public class ProductController
     }
 
     @GetMapping("/hats")
-    public Object getAllHats() {
-        return productService.getProductByCategory("hats");
+    public Object getHats() {return productService.getProductByCategory("hats");
     }
 
     // by id:
