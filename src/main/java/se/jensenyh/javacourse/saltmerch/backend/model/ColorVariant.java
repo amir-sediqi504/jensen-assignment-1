@@ -8,14 +8,6 @@ import java.util.Arrays;
 public class ColorVariant
 {
     // todo: needs fields: String colorName, List of String images, List of SizeContainer sizes
-    @JsonProperty("color")
-    public String getColorName() {
-        return colorName;
-    }
-    @JsonProperty("color")
-    public void setColorName(String colorName) {
-        this.colorName = colorName;
-    }
 
     @JsonProperty
     public String colorName;
@@ -35,8 +27,8 @@ public class ColorVariant
         this.images = images;
     }
     public ColorVariant() {
-    this.images = new ArrayList<>();
-    this.sizes = new ArrayList<>();
+        this.images = new ArrayList<>();
+        this.sizes = new ArrayList<>();
     }
     
     

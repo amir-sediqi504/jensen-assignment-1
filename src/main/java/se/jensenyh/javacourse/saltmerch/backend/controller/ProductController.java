@@ -52,9 +52,10 @@ public class ProductController
 
     @GetMapping("/products/{id}")
     public Object getEntireProduct (@PathVariable("id") int productId){
-        return productService.getEntireProduct(productId);}
-
+        return productService.getEntireProduct(productId);
     }
+
+}
 
 
 

@@ -89,10 +89,11 @@ public class Product implements Serializable
         this.title = title;
         this.description = description;
         this.previewImage = previewImage;
+        this.colorVariants = new ArrayList<>();
     }
 
     public Product() {
-
+        this.colorVariants = new ArrayList<>();
     }
 
 }

@@ -28,14 +28,29 @@ class TestBag {
     public void setup() {
         MockitoAnnotations.initMocks(this);
         controller = new ProductController(productService);
+
+        List<Product> someList = new ArrayList<>();
+        someList.add(new Product());
+
+        when(productService.getAllByCategory("bags")).thenReturn(someList);
+
+
     }
 
     @Test
     public void getAllBags_callsGetAllByCategory() {
 
-        controller.getAllBags();
-
+        List<Product> res = controller.getAllBags();
+        System.out.println("res = " + res);
 
         verify(productService).getAllByCategory("bags");
+
+    }
+
+    @Test
+    public void blabla(){
+        List<Product> res = controller.getAllBags();
+        System.out.println("res = " + res);
+        assertEquals(res, controller.getAllBags());
     }
 }
